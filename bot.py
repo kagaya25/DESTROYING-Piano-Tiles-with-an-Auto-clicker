@@ -2,13 +2,11 @@ from pyautogui import *
 import pyautogui as pq
 import time
 import keyboard
-
 def click(x,y):
     pq.moveTo(x,y)
     pq.mouseDown()
-    time.sleep(0.01) #This pauses the script for 0.01 seconds
+    time.sleep(0.01) 
     pq.mouseUp()
-
 while keyboard.is_pressed('q') == False:
     
     if pq.pixel(480, 552)[0] == 0:
